@@ -1,7 +1,7 @@
-// Game state
+// state
 let scores, currentScore, activePlayer, playing;
 
-// DOM elements
+// elements
 const player1ScoreElement = document.getElementById('player1-score');
 const player2ScoreElement = document.getElementById('player2-score');
 const currentScoreElement = document.getElementById('current-score');
@@ -10,7 +10,7 @@ const holdButton = document.getElementById('hold');
 const newGameButton = document.getElementById('new-game');
 
 
-// Initialization function
+// init function
 function init() {
     scores = [0, 0];
     currentScore = 0;
@@ -24,7 +24,7 @@ function init() {
     document.getElementById('dice').src = './7.gif';
 }
 
-// Switch player function
+// player switch function
 function switchPlayer() {
     currentScore = 0;
     currentScoreElement.textContent = `Current Score: ${currentScore}`;
@@ -33,13 +33,12 @@ function switchPlayer() {
     document.getElementById('game-container').classList.toggle('player-2-turn');
 }
 
-// Event listeners
+// listeners
 rollDiceButton.addEventListener('click', function () {
     if (playing) {
         const dice = Math.floor(Math.random() * 6) + 1;
         const diceImage = `./${dice}.png`;
 
-        // Update the src attribute of the dice img element
         document.getElementById('dice').src = diceImage;
 
         if (dice !== 1) {
@@ -68,5 +67,5 @@ holdButton.addEventListener('click', function () {
 
 newGameButton.addEventListener('click', init);
 
-// Initialize the game
+// start the game
 init();
