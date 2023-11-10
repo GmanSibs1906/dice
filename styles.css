@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background-color: #0f0f0f;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#game-container {
+    position: absolute;
+    margin-top: 15%;
+    padding: 20px;
+    background-color: #ffffff83;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dice-image {
+    max-height: 200px;
+}
+
+.flex {
+    display: flex;
+    background-color: white;
+}
+
+.flex div {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.player-score {
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    #game-container {
+        width: 90%;
+        margin-top: 30%;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .flex div {
+        width: 100%;
+    }
+
+    button {
+        padding: 10px 15px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+
+    }
+    #game-container {
+        width: 95%;
+        margin-top: 80%;
+        margin-left: 60%;
+    }
+}
